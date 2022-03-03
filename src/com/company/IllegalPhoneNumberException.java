@@ -11,8 +11,10 @@ public class IllegalPhoneNumberException {
      IllegalPhoneNumberException(int type) {
         this.type = type;
 
-        if (type == 1){
+      /*  if (type == 1){
             System.out.println("Illegales Land");
         }else if ()
+
+       */
     }
 }

@@ -42,8 +42,12 @@ public class Date {
 
     }
 
-    public boolean isValid(Date d){
-
+    public static boolean isValid(Date d) throws IllegalDateException {
+        if(d.day > 31 || d.day < 1){
+            throw new IllegalDateException(1);
+        }else if(d.mon > 31 || d.mon < 0){
+            throw new IllegalDateException(2);
+        }
 
         return false;
     }
