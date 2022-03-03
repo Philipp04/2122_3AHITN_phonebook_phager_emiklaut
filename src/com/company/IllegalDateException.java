@@ -6,7 +6,7 @@ public class IllegalDateException {
     public final static int MON_ILLEGAL = DAY_ILLEGAL + 1;
 
 
-    public IllegalDateException(int type) {
+     IllegalDateException(int type) {
         this.type = type;
         if (type == 1){
             System.out.println("Illegaler Tag!");

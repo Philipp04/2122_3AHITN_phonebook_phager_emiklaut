@@ -8,7 +8,7 @@ public class IllegalPhoneNumberException {
     public final static int STRING_FORMAT_ILLEGAL = NUMBER_ILLEGAL + 1;
 
 
-    public IllegalPhoneNumberException(int type) {
+     IllegalPhoneNumberException(int type) {
         this.type = type;
 
         if (type == 1){
