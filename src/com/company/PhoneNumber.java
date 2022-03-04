@@ -51,8 +51,14 @@ public class PhoneNumber {
                 '}';
     }
 
-    public static boolean isValidPhoneNumber(PhoneNumber d){
-
+    public static boolean isValidPhoneNumber(PhoneNumber d) throws IllegalPhoneNumberException {
+        if(d.country < 0 || d.country >= 100){
+            throw new IllegalPhoneNumberException(1);
+        }else if(d.areacode > 10000 || d.areacode < 0){
+            throw new IllegalPhoneNumberException(2);
+        }else if(d.number > 100000000 || d.number < 0){
+            throw new IllegalPhoneNumberException(3);
+        }
         return false;
     }
 }

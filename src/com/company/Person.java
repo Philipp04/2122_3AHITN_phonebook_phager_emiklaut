@@ -26,7 +26,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", givenname='" + givenname + '\'' +
                 ", nickname='" + nickname + '\'' +
-                ", birthday=" + birthday +
+                ", birthday=" + birthday.getDay() + "/" + birthday.getMon() + "/" + birthday.getYear() +
                 ", phone=" + phone +
                 '}';
     }

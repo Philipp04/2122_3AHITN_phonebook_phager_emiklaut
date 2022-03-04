@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -12,22 +13,16 @@ public class Main {
         ArrayList<Person> al = new ArrayList<>();
         br.readLine();
 
+
         StreamOperation s = new StreamOperation();
 
-        while(br.ready()){
+        while(br.read() != -1){
             Person p = s.fromStream(br);
-            br.readLine();
             al.add(p);
+            br.readLine();
         }
 
         System.out.println(al.get(0).toString());
-
-        /*try {
-            Date.isValid(d);
-        }catch (IllegalDateException e){
-            e.printStackTrace();
-        }
-        */
 
 
     }
