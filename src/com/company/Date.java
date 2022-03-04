@@ -12,7 +12,7 @@ public class Date {
     }
 
     Date(String date){
-        String[] parts = date.split(".");
+        String[] parts = date.split("\\.");
         day = Integer.parseInt(parts[0]);
         mon = Integer.parseInt(parts[1]);
         year = Integer.parseInt(parts[2]);
@@ -49,6 +49,6 @@ public class Date {
             throw new IllegalDateException(2);
         }
 
-        return false;
+        return true;
     }
 }

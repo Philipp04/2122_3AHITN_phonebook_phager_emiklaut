@@ -12,7 +12,11 @@ public class PhoneNumber {
     }
 
     PhoneNumber(String number){
-        this.number = Integer.parseInt(number);
+        String[] parts = number.split(" ");
+        country = Integer.parseInt(parts[0]);
+        String[] area = parts[1].split("/");
+        this.areacode = Integer.parseInt(area[0]);
+        this.number = Integer.parseInt(area[1]);
     }
 
     public int getAreaCode(){
@@ -36,7 +40,8 @@ public class PhoneNumber {
                 '}';
     }
 
-    public boolean IsValidPhoneNumber(PhoneNumber d){
+    public static boolean isValidPhoneNumber(PhoneNumber d){
+
         return false;
     }
 }
