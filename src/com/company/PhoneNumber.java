@@ -1,5 +1,16 @@
 package com.company;
 
+/**
+ * PhoneNumber gibt an welchen areacode die Telefonnummer hat.
+ * Aus welchem Land die Telefonnummer kommt und die eigentliche
+ * Telefonnummer.
+ *
+ * @author  phager
+ *
+ * @version 1.0
+ */
+
+
 public class PhoneNumber {
     private int country;
     private int areacode;
