@@ -1,5 +1,16 @@
 package com.company;
 
+/**
+ * IllegalPhoneNumberException wirft eine Exception, wenn
+ * die Landes-Vorwahl, Ort-Nummer, Telefonnummer, String-Format der Telefonnummer
+ * illegal ist/sind.
+ *
+ * @author emiklaut
+ *
+ * @version 1.0
+ */
+
+
 public class IllegalPhoneNumberException {
     public int type;
     public final static int COUNTRY_ILLEGAL = 1;

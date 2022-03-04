@@ -1,5 +1,16 @@
 package com.company;
 
+/**
+ * IllegalDateException wirft eine Exception, falls
+ * der Tag und/oder das Monat illegal ist.
+ *
+ * @author emiklaut
+ *
+ * @version 1.0
+ */
+
+
+
 public class IllegalDateException extends Throwable {
     private int type;
     public final static int DAY_ILLEGAL = 1;
