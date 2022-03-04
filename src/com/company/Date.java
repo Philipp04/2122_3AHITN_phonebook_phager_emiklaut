@@ -1,5 +1,11 @@
 package com.company;
 
+/**
+ * Date-Klasse speichert Tag, Monat und Jahr und prüft ob Datum richtig eingegeben ist und ob dieses Jahr ein Schaltjahr ist.
+ *
+ * @author phager
+ *
+ */
 public class Date {
     private int day;
     private int mon;
@@ -12,7 +18,7 @@ public class Date {
     }
 
     Date(String date){
-        String[] parts = date.split(".");
+        String[] parts = date.split("\\.");
         day = Integer.parseInt(parts[0]);
         mon = Integer.parseInt(parts[1]);
         year = Integer.parseInt(parts[2]);

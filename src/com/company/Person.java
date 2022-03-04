@@ -1,5 +1,10 @@
 package com.company;
 
+/**
+ *Die Person-Klasse speichert die Eigenschaften einer Person und wandelt alle Eigenschaften in einem String um.
+ *
+ * @author P. Hager
+ */
 public class Person {
     private String name;
     private String givenname;
