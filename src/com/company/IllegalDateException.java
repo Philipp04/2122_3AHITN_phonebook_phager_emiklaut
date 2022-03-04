@@ -5,7 +5,6 @@ package com.company;
  * der Tag und/oder das Monat illegal ist.
  *
  * @author emiklaut
- *
  * @version 1.0
  */
 
