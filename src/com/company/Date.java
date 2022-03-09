@@ -57,4 +57,15 @@ public class Date {
 
         return true;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "Date{" +
+                "day=" + day +
+                ", mon=" + mon +
+                ", year=" + year +
+                '}';
+    }
 }

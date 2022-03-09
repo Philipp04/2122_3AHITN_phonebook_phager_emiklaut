@@ -20,6 +20,26 @@ public class Person {
         phone = p;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getGivenname() {
+        return givenname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public PhoneNumber getPhone() {
+        return phone;
+    }
+
+    public Date getBirthday(){
+        return birthday;
+    }
+
     @Override
     public String toString() {
         return "Person{" +

@@ -2,7 +2,14 @@ package com.company;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Iterator;
+
+/**
+ *Verbindung der Eingabe Klassen mit den Daten Klassen
+ *
+ * @author P. Hager
+ * @version 1.0
+ */
 
 public class Main {
 
@@ -10,19 +17,27 @@ public class Main {
         File f = new File("C:\\Users\\Philipp\\IdeaProjects\\2122_3AHITN_phonebook_phager_emiklaut\\src\\com\\company\\data.csv");
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
-        ArrayList<Person> al = new ArrayList<>();
-        br.readLine();
-
-
+        ArrayList<Date> al = new ArrayList<>();
         StreamOperation s = new StreamOperation();
+        br.readLine();
+        Writer w = new FileWriter(f,true);
+        Person newPerson = new Person("Manuel","Neuer",new Date(2,3,2002),new PhoneNumber("001 1234/234451"));
 
-        while(br.read() != -1){
+        s.ToStream(w,newPerson);
+
+        while(br.ready()){
             Person p = s.fromStream(br);
-            al.add(p);
-            br.readLine();
+            al.add(p.getBirthday());
         }
 
-        System.out.println(al.get(0).toString());
+        Iterator l = al.iterator();
+        while(l.hasNext()){
+            Date gb = (Date) l.next();
+            System.out.println(gb.toString());
+        }
+
+
+
 
 
     }
