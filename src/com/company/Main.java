@@ -14,7 +14,7 @@ import java.util.Iterator;
 public class Main {
 
     public static void main(String[] args) throws IllegalDateException, IOException {
-        File f = new File("C:\\Users\\Philipp\\IdeaProjects\\2122_3AHITN_phonebook_phager_emiklaut\\src\\com\\company\\data.csv");
+        File f = new File("data.csv");
         FileReader fr = new FileReader(f);
         BufferedReader br = new BufferedReader(fr);
         ArrayList<Date> al = new ArrayList<>();
