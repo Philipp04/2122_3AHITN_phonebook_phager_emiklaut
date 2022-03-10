@@ -1,5 +1,14 @@
 package com.company;
 
+/**
+ * IllegalPhoneNumberException  throwt eine Exception, falls
+ * eine PhoneNumber illegal ist.
+ *
+ * @author emiklaut
+ *
+ * @version  1.0
+ */
+
 public class IllegalPhoneNumberException extends Throwable {
     public int type;
     public final static int COUNTRY_ILLEGAL = 1;
