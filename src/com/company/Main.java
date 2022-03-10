@@ -30,7 +30,7 @@ public class Main {
             al.add(p.getBirthday());
         }
 
-        Iterator l = al.iterator();
+        Iterator<Date> l = al.iterator();
         while(l.hasNext()){
             Date gb = (Date) l.next();
             System.out.println(gb.toString());

@@ -45,6 +45,8 @@ public class Person {
         return name + ";" + givenname + ";" + nickname + ";" + birthday.getDay() + "." +
                 birthday.getMon() + "." + birthday.getYear() + ";" + phone.getCountryCode() + " "+
                 phone.getAreaCode() + "/" + phone.getNumber();
+
+
         //Captain;America;Cap;04.07.1918;001 1234/234451
     }
 }
