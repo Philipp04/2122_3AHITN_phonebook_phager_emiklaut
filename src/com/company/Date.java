@@ -11,7 +11,7 @@ public class Date {
     private int mon;
     private int year;
 
-    Date(int m, int d, int y) throws IllegalDateException {
+    Date(int d, int m, int y) throws IllegalDateException {
         mon = m;
         day = d;
         year = y;

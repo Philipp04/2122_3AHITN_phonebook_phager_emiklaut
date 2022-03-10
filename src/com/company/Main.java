@@ -23,7 +23,7 @@ public class Main {
         Writer w = new FileWriter(f,true);
 
         try{
-            Person newPerson = new Person("Manuel","Neuer",new Date(2,12312312,2002),new PhoneNumber("001 1234/234451"));
+            Person newPerson = new Person("Manuel","Neuer",new Date(2,32,2002),new PhoneNumber("001 1234/234451"));
             s.ToStream(w,newPerson);
         }catch(IllegalPhoneNumberException | IllegalDateException e){
         }
