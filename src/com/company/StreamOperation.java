@@ -18,8 +18,7 @@ public class StreamOperation {
     public void ToStream(Writer w, Person p) throws IOException {
         BufferedWriter fw = new BufferedWriter(w);
         fw.newLine();
-        fw.write(p.getName() + ";" + p.getGivenname() + ";" + p.getNickname() + ";" + p.getBirthday().getDay() + "." + p.getBirthday().getMon() + "." + p.getBirthday().getYear() +
-                ";" +p.getPhone().getCountryCode() + " " + p.getPhone().getAreaCode() + "/" + p.getPhone().getNumber());
+        fw.write(p.toString());
          fw.close();
                 //Captain;America;Cap;04.07.1918;001 1234/234451
     }
