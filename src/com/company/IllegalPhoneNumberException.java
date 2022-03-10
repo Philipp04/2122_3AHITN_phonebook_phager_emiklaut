@@ -20,11 +20,11 @@ public class IllegalPhoneNumberException extends Throwable {
      IllegalPhoneNumberException(int type) {
         this.type = type;
 
-       if (type == 1){
+       if (type == COUNTRY_ILLEGAL){
             System.out.println("Illegales Land");
-        }else if (type == 2){
+        }else if (type == AREA_ILLEGAL){
            System.out.println("Illegaler Ort");
-       }else if(type == 3){
+       }else if(type == NUMBER_ILLEGAL){
            System.out.println("Illegale Nummer");
        }else {
            System.out.println("Illegales String Format");

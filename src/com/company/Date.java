@@ -11,18 +11,22 @@ public class Date {
     private int mon;
     private int year;
 
-    Date(int m, int d, int y){
+    Date(int m, int d, int y) throws IllegalDateException {
         mon = m;
         day = d;
         year = y;
+        isValid();
+
     }
 
-    Date(String date){
+    Date(String date) throws IllegalDateException {
         String[] parts = date.split("\\.");
         day = Integer.parseInt(parts[0]);
         mon = Integer.parseInt(parts[1]);
         year = Integer.parseInt(parts[2]);
-    }
+            isValid();
+        }
+
 
     public int getDay(){
         return day;
@@ -48,10 +52,10 @@ public class Date {
 
     }
 
-    public static boolean isValid(Date d) throws IllegalDateException {
-        if(d.day > 31 || d.day < 1){
+    public boolean isValid() throws IllegalDateException {
+        if(day > 31 || day < 1){
             throw new IllegalDateException(IllegalDateException.DAY_ILLEGAL);
-        }else if(d.mon > 31 || d.mon < 0){
+        }else if(mon > 31 || mon < 0){
             throw new IllegalDateException(IllegalDateException.MON_ILLEGAL);
         }
 

@@ -29,7 +29,7 @@ public class StreamOperation {
             String[] d = data.split(";");
             try {
                 Date date = new Date(d[3]);
-                Date.isValid(date);
+                date.isValid();
                 PhoneNumber pn = new PhoneNumber(d[4]);
                 PhoneNumber.isValidPhoneNumber(pn);
                 return new Person(d[0], d[1], date, pn);

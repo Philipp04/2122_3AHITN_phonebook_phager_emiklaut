@@ -22,12 +22,16 @@ public class PhoneNumber {
         number = n;
     }
 
-    PhoneNumber(String number){
-        String[] parts = number.split(" ");
-        country = Integer.parseInt(parts[0]);
-        String[] area = parts[1].split("/");
-        this.areacode = Integer.parseInt(area[0]);
-        this.number = Integer.parseInt(area[1]);
+    PhoneNumber(String number) throws IllegalPhoneNumberException {
+        try {
+            String[] parts = number.split(" ");
+            country = Integer.parseInt(parts[0]);
+            String[] area = parts[1].split("/");
+            this.areacode = Integer.parseInt(area[0]);
+            this.number = Integer.parseInt(area[1]);
+        }catch (Exception e){
+            throw new IllegalPhoneNumberException(IllegalPhoneNumberException.STRING_FORMAT_ILLEGAL);
+        }
     }
 
     public int getAreaCode(){
